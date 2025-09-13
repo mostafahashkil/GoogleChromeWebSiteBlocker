@@ -1,0 +1,29 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+ul { list-style: none; padding: 0; }
+li { margin-bottom: 8px; }
+button { margin-left: 10px; }
+input { margin-right: 10px; }
+{
+  "manifest_version": 3,
+  "name": "Website Blocker",
+  "version": "1.0",
+  "description": "Block websites defined by the user.",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Website Blocker"
+  }
+}
+
